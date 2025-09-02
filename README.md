@@ -1,1 +1,1 @@
-# snouz_better_asteroid_collector
+Contains graphics part from YuokiTani.
