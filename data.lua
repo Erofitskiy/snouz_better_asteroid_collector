@@ -28,15 +28,29 @@ if data.raw["asteroid-collector"]["asteroid-collector"] then
     {
       type = "recipe",
       name = "snouz_better_asteroid_collector",
+      icon = graphics .. "/icons/snouz_better_asteroid_collector.png",
+      category = "electromagnetics",
       energy_required = 10,
       enabled = false,
+      allow_productivity = false,
       ingredients =
       {
         {type = "item", name = "asteroid-collector", amount = 2},
-        {type = "item", name = "quantum-processor", amount = 3},
+        {type = "item", name = "quantum-processor", amount = 1},
         {type = "item", name = "electric-engine-unit", amount = 6};
+        {type = "fluid", name = "fluoroketone-cold", amount = 6, ignored_by_stats = 3},
       },
-      results = {{type="item", name="snouz_better_asteroid_collector", amount=1}}
+      results = {
+        {type = "item", name = "snouz_better_asteroid_collector", amount = 1},
+        {type = "fluid", name = "fluoroketone-hot", amount = 3, temperature = 180, ignored_by_stats = 3, ignored_by_productivity = 3}
+      },
+      crafting_machine_tint =
+      {
+        primary = {r = 0.460, g = 0.188, b = 0.649, a = 1.000}, -- #752fa5ff
+        secondary = {r = 0.489, g = 0.484, b = 0.381, a = 1.000}, -- #7c7b61ff
+        tertiary = {r = 0.196, g = 0.101, b = 0.101, a = 1.000}, -- #311919ff
+        quaternary = {r = 0.518, g = 0.539, b = 0.993, a = 1.000}, -- #8489fdff
+      }
     },
 
     {
