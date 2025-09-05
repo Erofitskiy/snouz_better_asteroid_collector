@@ -30,6 +30,8 @@ if data.raw["asteroid-collector"]["asteroid-collector"] then
       name = "snouz_better_asteroid_collector",
       icon = graphics .. "/icons/snouz_better_asteroid_collector.png",
       category = "electromagnetics",
+      subgroup = "space-platform",
+      order = "de[asteroid-collector2]",
       energy_required = 10,
       enabled = false,
       allow_productivity = false,
@@ -291,7 +293,7 @@ if data.raw["asteroid-collector"]["asteroid-collector"] then
   ascol.name = "snouz_better_asteroid_collector"
   ascol.icon = graphics .. "/icons/snouz_better_asteroid_collector.png"
   ascol.graphics_set = ascolgraphics
-
+  ascol.minable = {mining_time = 0.2, result = "snouz_better_asteroid_collector"}
 
   ascol.inventory_size = 78 --39
   ascol.inventory_size_quality_increase = 10 --5
